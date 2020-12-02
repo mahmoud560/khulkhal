@@ -1,0 +1,561 @@
+:root{
+--primary-color: rgba(0, 0, 0, 0.4);
+--overlay-color: rgba(24, 39, 51, 0.85);
+--menu-speed: 0.75s ;
+--cart-color:rgba(220,220,220,.9);
+}
+
+
+.user_Name{
+    z-index: 10000;
+    color: black;
+    font-size: 1rem;
+    font-family: cursive;
+    position: absolute;
+    top: 70px;
+    transform: translateY(100%);
+}
+
+
+/**myAccountPage*/
+.myAccount{
+    margin-top: 50px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 300px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    z-index: 10;
+    padding: 0;
+}
+
+.myAccount h5{
+   padding-top: 2rem;
+}
+
+.myAccount h1{
+    font-size: 0.8rem;
+    color: blue;
+}
+
+.myAccount span{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.btn-delete-Acc{
+    width: 200px !important;
+    height: 30px !important;
+    font-size: 10px !important;
+    background-color: rgba(0,0,60) !important;
+    color: white !important;
+   margin-bottom: 1rem !important;
+    border: none !important;
+}
+
+.btn-delete-Acc:hover{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid red !important;
+}
+
+/**Info Tbale**/
+.myAccInfo{
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+
+@media (max-width:770px){
+    .myAccInfo{
+        margin: 0;
+    }
+}
+.myAccInfo th{
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.myAccInfo th i:hover{
+   color: black;
+    cursor: pointer;
+}
+/**end of Info Table**/
+
+/**myOrdersTbale**/
+.myOrders table{
+    margin-left: 10rem;
+    margin-top: 2rem;
+}
+@media (max-width:770px) {
+    .myOrders table{
+       margin: 0;
+        padding: 0;
+        margin-right: 1rem;
+        padding-right: 2rem;
+    }
+    .myOrders{
+        padding: 0;
+    }
+   
+}
+
+.myOrders h4{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+@media (max-width:770px){
+    .myOrders h4{
+        margin-bottom: 1rem;
+    }
+}
+.myOrders thead{
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.canceled{
+    color: red !important;
+     font-size: 0.8rem;
+}
+
+.received {
+    color: green !important;
+     font-size: 0.8rem;
+}
+
+#deleteOrder{
+    color: red !important;
+    cursor: pointer;
+}
+/**end of myOrdersTbale**/
+
+/***loyaltyProg**/
+
+.loyaltyProg {
+    display: row;
+    justify-content: center;
+    align-content: center;
+    align-items:center;
+}
+
+.loyaltyProg div{
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    height: 4rem;
+     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items:center;
+    place-items:center;
+}
+
+.loyaltyProg div:hover{
+   opacity: .8;
+}
+
+.loyaltyProg div p {
+    width: 15rem;
+    font-size: .8rem;
+    display: block;
+    justify-content: center;
+    top: 1rem;
+   
+}
+
+
+
+.loyaltyProg div p input{
+    width:80%;
+    -webkit-appearance: none;
+    outline: none;
+    height: 3px;
+    border-radius: 10px;
+    background-color: var(--cart-color);
+}
+
+.loyaltyProg div p input::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    height: 15px;
+    width: 10px;
+    background-color: black;
+}
+
+.sliderValue{
+    width: 100%;
+    position: relative;
+    
+    
+}
+
+.sliderValue span{
+position: absolute;
+    color: white;
+    font-weight: 100;
+    height: 50px;
+    width: 50px;
+    font-size: .8rem;
+    transform: translateX(-30px) scale(0);
+    transition: transform 0.3s ease-in-out;
+    
+   
+    
+}
+
+
+
+.sliderValue span:after{
+   position: absolute;
+    color: white;
+    font-weight: 100;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    font-size: .5rem;
+    place-items:center;
+   padding: 10px;
+    border: 3px solid var(--cart-color);
+    content: "";
+    transform: rotate(45deg);
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: -1;
+}
+
+
+.loyaltySen{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-content: center;
+    place-items:center;
+    color: black;
+    padding-bottom: 2rem;
+}
+
+.loyaltySen h4{
+   font-size: 1rem;
+    font-family: cursive;
+    color: black;
+    margin-top: 0;
+    padding-top: 0;
+    font-weight: 500;
+}
+.loyaltySen h4 span{
+    font-size: 1.7rem ;
+    color: black;
+    font-family: cursive;
+    font-weight: 500;
+}
+/***end of loyaltyProg**/
+
+
+/***myAccountNotLogged**/
+.notLogged{
+    color: black;
+    font-family: 5rem;
+    position: absolute;
+    top: 100px;
+}
+/***end of myAccountNotLogged**/
+
+
+/**deletr-Acc-confirmation**/
+
+.delete-Acc-confirmation-Overly{
+     background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transition:all 0.2s ease-in;
+    visibility: hidden;
+    
+}
+.showdelete-Acc-confirmation-Overly{
+visibility: visible;
+}
+
+.pop-up-delete-confirm{
+      width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+     z-index: 900000;
+    visibility: hidden;
+}
+
+.showpop-up-delete-confirm{
+    visibility: visible;
+}
+
+.pop-up-delete-confirm-1{
+    background-color: white;
+    position: fixed;
+    font-size: 1rem;
+    top: 10rem;
+    width:300px;
+    height:auto;
+    border-radius: 1rem;
+    transform: translateX(-500%);
+    transition:all 0.4s ease-in;
+}
+
+.show-pop-delet-confirm-1{
+    transform: translateX(0%);
+}
+
+.yes-delete{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    width: 100px;
+    height: 20px;
+    font-size: 12px;
+    border: none !important;
+    background-color: red;
+    opacity: .9;
+    color: white;
+}
+
+.dont-delete{
+     position: absolute;
+    bottom: 2rem;
+    right:2rem;
+    width: 100px;
+    height: 20px;
+    font-size: 12px;
+     border: none !important;
+    background-color: green;
+    color: white;
+    opacity: .9;
+}
+
+.pop-up-delete-confirm-1 button:hover{
+    opacity: .4;
+}
+
+.pop-up-delete-confirm-1 i{
+   position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+.pop-up-delete-confirm-1 p{
+    margin: 1rem 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
+/**end of deletr-Acc-confirmation**/
+
+
+/***edit BTn***/
+.editBtn{
+    width: 100px !important;
+    height: 30px !important;
+    color: white !important;
+    background-color: black !important;
+    border: 1rem !important;
+    border: none !important;
+    transition: 0.2s ease-in;
+    transform: scale(0);
+}
+
+.editBtn:hover{
+    transform: scale(1.1);
+}
+
+.showeditBtn{
+  transform: scale(1);
+}
+/***end of edit BTn***/
+/**end of myAccountPage*/
+
+
+/**greeeting for new user**/
+.greetingFormNewOverlay{
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition:all 0.2s ease-in;
+}
+
+.transparentGreet{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+     z-index: 900000;
+    visibility: hidden;
+}
+
+
+.showGreetOverlay{
+    visibility: visible;
+}
+
+.GreetingForNew{
+     background-color: rgba(220,220,220,.9);
+    position: fixed;
+    top: 5rem;
+    width: 50%;
+    height:43%;
+    border-radius: 2rem;
+    transform: translateY(-500%);
+    transition:all 0.4s ease-in;
+}
+
+.showGreet{
+ transform: translateY(0%);
+}
+
+
+
+.GreetingForNew i{
+    position: absolute;
+    top: 20px;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.GreetingForNew span{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+}
+
+.helloNew{
+    font-family: cursive;
+    font-size: 2rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+
+@keyframes scale{
+    0%{transform: scale(1);}
+    5%{transform: scale(0.95);}
+    10%{transform: scale(0.9);}
+    15%{transform: scale(0.85);}
+    20%{transform: scale(0.8);}
+    25%{transform: scale(0.75);}
+    30%{transform: scale(0.7);}
+    35%{transform: scale(0.65);}
+    40%{transform: scale(0.6);}
+    45%{transform: scale(0.55);}
+    50%{transform: scale(0.5);}
+    55%{transform: scale(0.45);}
+    60%{transform: scale(0.4);}
+    65%{transform: scale(0.35);}
+    70%{transform: scale(0.3);}
+    75%{transform: scale(0.25);}
+    80%{transform: scale(0.2);}
+    85%{transform: scale(0.15);}
+    90%{transform: scale(0.1);}
+    95%{transform: scale(0.05);}
+    100%{transform: scale(0);}
+   
+}
+
+.hidingGret{
+    animation: scale .1s ;
+}
+
+/**end of greeeting for new user**/
+
+/**edit my Account*8****/
+.editName input{
+    width: 5rem;
+    height: 20px;
+    font-size: .8rem;
+    border: none !important;
+    margin-left: 10px;
+    color:  rgba(0, 0, 0, 0.8);
+}
+
+
+.editName input:focus{
+    border: none !important;
+}
+
+
+/**end of edit my Account*8****/
+
+
+
+
+
+
+/**discountCodes**/
+.discountCodes{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 1rem;
+    background-color: rgba(220,220,220,.6);
+    color: white;
+    display: flex;
+    place-content: center;
+    z-index: 11;
+    font-size: .6rem;
+    
+}
+
+
+.discountCodes i{
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
+    color: black;
+    cursor: pointer;
+}
+/**end of discountCodes**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,254 @@
+
+.menu-wrap {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1;
+}
+
+.menu-wrap .toggler {
+position: absolute;
+top: 25px;
+left: 33%;
+z-index: 2;
+cursor: pointer;
+width: 50px;
+opacity: 0;
+}
+
+.menu-wrap .hamburger {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+width:60px;
+height: 50px;
+padding: 1rem;
+background: var(--primary-color);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.menu-wrap .hamburger >div {
+position: relative;
+width: 100%;
+height: 2px;
+background-color: white;
+display: flex;
+align-content: center;
+justify-content: center;
+transition: all 0.4s ease-in;
+}
+
+.menu-wrap .hamburger >div:before,
+.menu-wrap .hamburger >div:after{
+content: "";
+position: absolute;
+top: -10px;
+width: 100%;
+height: 2px;
+background: inherit;
+}
+
+.menu-wrap .hamburger >div:after {
+top: 10px;
+}
+
+.menu-wrap .toggler:checked + .hamburger >div {
+transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger >div:before,
+.menu-wrap .toggler:checked + .hamburger >div:after {
+top: 0;
+transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger >div {
+transform: rotate(225deg);
+}
+
+.menu-wrap .toggler:checked ~ .menu {
+visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu >div {
+ transform: scale(1);
+ transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu >div >div {
+opacity: 1;
+transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+visibility: hidden;
+}
+
+.menu-wrap .menu >div {
+background: rgba(0,0,0,0.95);
+border-radius: 50%;
+width: 200vw;
+height: 200vw;
+display: flex;
+flex: none;
+align-items: center;
+justify-content: center;
+transform: scale(0);
+transition: all 0.4s ease;
+}
+
+.menu-wrap .menu >div >div {
+text-align: center;
+max-width: 90vw;
+max-height: 100vh;
+opacity: 0;
+transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu >div >div >ul{
+    position: relative;
+    top: -20px;
+}
+
+
+.menu-wrap .menu >div >div >ul >li {
+color: white;
+text-decoration: none;
+list-style: none;
+font-size: 1.2rem;
+padding: 10px;
+}
+
+.menu-wrap .menu >div >div >ul >li >a {
+color: inherit;
+text-decoration: none;
+transition: color 0.4s ease-in;
+}
+
+
+.menu-wrap .menu >div >div >ul >li:hover{
+font-size: 1.3rem;
+transition: font-size 0.4s ease-in;
+}
+
+.inst-icon {
+cursor: pointer;
+color: white;
+font-size: 4rem !important;
+}
+
+.inst-icon:hover {
+    color: rgba(0,0,60);
+}
+
+
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px;
+background: black;
+margin: 0 ;
+z-index: 11;
+padding: 0;
+display: flex;
+justify-content: center;
+transition: all 0.4s ease-in;
+  }
+
+
+.img {
+position: absolute;
+top: 0;
+left: 60px;
+width: 100px;
+height: 100%;
+color: white;
+
+}
+
+
+#Show-cart {
+position: absolute;
+right: 20px;
+bottom: 10px;
+cursor: pointer;
+color: white;
+z-index: 14;
+font-size: 2rem;
+}
+
+@media (max-width:770px){
+    #Show-cart{
+       margin-right: 1rem;
+    }
+}
+
+ 
+
+#createAccount {
+position: absolute;
+right: 80px;
+bottom: 10px;
+color: white;
+z-index: 100;
+cursor: pointer;
+font-size: 1.3rem;
+}
+
+@media (max-width:770px){
+    #createAccount {
+       margin-right: 1rem;
+    }
+}
+
+.accountMenu{
+   background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    color: black;
+    font-size: 1rem;
+    padding: 0 8px;
+    visibility: hidden;
+}
+
+.accountMenu a:hover{
+     list-style: none !important;
+    text-decoration: none !important; 
+    border: none !important;
+    outline: none !important;
+}
+
+
+.accountMenu p{
+    cursor: pointer;
+    list-style: none !important;
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.accountMenu p:hover{
+    color: var(--primary-color) !important;
+    list-style: none !important;
+    text-decoration: none !important; 
+    border: none !important;
+    outline: none !important;
+}
+
+.show-accountMenu{
+    visibility: visible;
+}
